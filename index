@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 
-import debug from 'debug'
-import path from 'path'
-import parse from 'minimist'
-import moduleAlias from 'module-alias'
-import Telegraf from '@telegraf/core'
+const debug = require('debug')
+const path = require('path')
+const parse = require('minimist')
+const { addAlias } = require('module-alias')
+const Telegraf = require('telegraf')
 
-const { addAlias } = moduleAlias
-
-const log = debug('@telegraf/cli:cli')
+const log = debug('telegraf:cli')
 
 const help = () => {
   console.log(`Usage: @telegraf/cli [opts] <bot-file>
@@ -77,7 +75,7 @@ let tlsOptions
 
 try {
   if (args.logs) {
-    debug.enable('@telegraf/cli:*')
+    debug.enable('telegraf:*')
   }
   addAlias('telegraf', path.join(__dirname, '../'))
   const mod = require(file)

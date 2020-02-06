@@ -1,12 +1,12 @@
 {
   "name": "@telegraf/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for next generation Telegraf",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
+  "type": "commonjs",
   "engines": {
     "node": ">=13.5"
   },
@@ -17,7 +17,7 @@
     "@telegraf/cli": "./index"
   },
   "dependencies": {
-    "@telegraf/core": "latest",
+    "telegraf": "latest",
     "debug": "^4.1.1",
     "minimist": "^1.2.0",
     "module-alias": "^2.2.2"
