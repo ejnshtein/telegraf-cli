@@ -1,0 +1,28 @@
+{
+  "name": "@telegraf/cli",
+  "version": "1.0.0",
+  "description": "CLI for next generation Telegraf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=13.5"
+  },
+  "repository": "github:ejnshtein/telegraf-cli",
+  "author": "ejnshtein",
+  "license": "MIT",
+  "bin": {
+    "@telegraf/cli": "./index"
+  },
+  "dependencies": {
+    "@telegraf/core": "latest",
+    "debug": "^4.1.1",
+    "minimist": "^1.2.0",
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
+}
